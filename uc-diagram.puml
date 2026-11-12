@@ -1,0 +1,32 @@
+
+@startuml
+left to right direction
+
+actor "Відвідувач" as Visitor
+actor "Гість" as Guest
+actor "Зареєстрований\nкористувач" as User
+
+Visitor <|-- Guest
+Visitor <|-- User
+
+rectangle "Система управління бібліотекою відеоігор" {
+    usecase "Переглянути каталог\nігор" as UC01
+    usecase "Знайти гру" as UC02
+    usecase "Додати гру до\nбібліотеки" as UC03
+    usecase "Видалити гру з\nбібліотеки" as UC04
+    usecase "Залишити відгук\nпро гру" as UC05
+    usecase "Переглянути\nвідгуки" as UC06
+}
+
+Guest --> UC01
+Guest --> UC02
+Guest --> UC06
+
+User --> UC01
+User --> UC02
+User --> UC03
+User --> UC04
+User --> UC05
+User --> UC06
+
+@enduml
