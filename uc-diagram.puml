@@ -1,10 +1,9 @@
-
 @startuml
 left to right direction
 
 actor "Відвідувач" as Visitor
 actor "Гість" as Guest
-actor "Зареєстрований\nкористувач" as User
+actor "Авторизований\nкористувач" as User
 
 Visitor <|-- Guest
 Visitor <|-- User
